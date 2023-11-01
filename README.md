@@ -3,7 +3,10 @@
 -Create React App
 -Configured Tailwind
 -Header
-#Features
+-login form
+-Sign up form
+
+# Features
 
 1.Basic Outline
 
