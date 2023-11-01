@@ -1,4 +1,4 @@
-#Netflix gpt
+# Netflix gpt
 
 -Create React App
 -Configured Tailwind
