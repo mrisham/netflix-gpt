@@ -13,6 +13,21 @@
 -create signup user account
 -Implemented sign in user api
 -created our redux store with userSlice
+-Implemented sign out
+-update profile
+-BugFix- Signup user display name and profile picture update
+-BugFix- If the user is not logged in redirect to login page and block browse and visaviz
+-unsubscribe from onAuthStateChanged callback
+-Added hardCoded values to Constants file
+-Registered for TmDB API and create a new app to get acess token
+-Get data from TmDB now playing movie list api
+-custom hook for now playing movies
+-updated the store with movies data by creating a movie slice
+-planning for the ui- main and secondary container
+-fetched data for trailer vedio
+-updated the store with trailer vedio
+-embedded the youtube video and made it autplay and muted
+-also added taiwind css to style
 
 # Features
 
