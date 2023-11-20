@@ -28,6 +28,7 @@
 -updated the store with trailer vedio
 -embedded the youtube video and made it autplay and muted
 -also added taiwind css to style
+-build secondary component
 
 # Features
 
