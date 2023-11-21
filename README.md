@@ -29,6 +29,11 @@
 -embedded the youtube video and made it autplay and muted
 -also added taiwind css to style
 -build secondary component
+-second component
+-built movie list and movie card
+-found tmdb img cdn
+-Enhanced the browse UI
+-usePopularMovies hook
 
 # Features
 
