@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
-import { logo } from "../utils/contants";
+import { SUPPORTED_LANGUAGES, logo } from "../utils/contants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
@@ -35,8 +35,6 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   const handleGptSearchClick = () => {
-    console.log("Dispatching toggleGptSearchView action");
-
     dispatch(toggleGptSearchView());
     //toggle gpt search click;
   };
@@ -55,6 +53,13 @@ const Header = () => {
       <img className="w-44" src={logo} alt="logo" />
       {user && (
         <div className="flex p-2 gap-2">
+          <select className="p-2 m-2 bg-black text-white rounded-lg">
+            {SUPPORTED_LANGUAGES.map((lang) => (
+              <option key={lang.identifier} value={lang.identifier}>
+                {lang.name}
+              </option>
+            ))}
+          </select>
           <button
             className="bg-purple-800 text-white rounded-lg py-2 px-4 mx-4 my-2"
             onClick={handleGptSearchClick}
