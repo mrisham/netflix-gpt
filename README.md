@@ -34,6 +34,7 @@
 -found tmdb img cdn
 -Enhanced the browse UI
 -usePopularMovies hook
+-gpt search feature
 
 # Features
 

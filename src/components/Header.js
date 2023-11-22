@@ -6,9 +6,10 @@ import { useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 import { logo } from "../utils/contants";
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
-  const dispach = useDispatch();
+  const dispatch = useDispatch();
 
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Header = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { email, uid, displayName, photoURL } = user;
-        dispach(
+        dispatch(
           addUser({
             uid: uid,
             email: email,
@@ -26,13 +27,19 @@ const Header = () => {
         );
         navigate("/browse");
       } else {
-        dispach(removeUser());
+        dispatch(removeUser());
         navigate("/");
       }
     });
     //unsubscribe when the component unmounts
     return () => unsubscribe();
   }, []);
+  const handleGptSearchClick = () => {
+    console.log("Dispatching toggleGptSearchView action");
+
+    dispatch(toggleGptSearchView());
+    //toggle gpt search click;
+  };
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
@@ -48,6 +55,12 @@ const Header = () => {
       <img className="w-44" src={logo} alt="logo" />
       {user && (
         <div className="flex p-2 gap-2">
+          <button
+            className="bg-purple-800 text-white rounded-lg py-2 px-4 mx-4 my-2"
+            onClick={handleGptSearchClick}
+          >
+            GPT Search
+          </button>
           <img
             className="w-12 h-12 rounded-full"
             src={user.photoURL}
