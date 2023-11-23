@@ -7,10 +7,11 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { useDispatch } from "react-redux";
 import { SUPPORTED_LANGUAGES, logo } from "../utils/contants";
 import { toggleGptSearchView } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
-
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
   useEffect(() => {
@@ -34,6 +35,9 @@ const Header = () => {
     //unsubscribe when the component unmounts
     return () => unsubscribe();
   }, []);
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
+  };
   const handleGptSearchClick = () => {
     dispatch(toggleGptSearchView());
     //toggle gpt search click;
@@ -53,19 +57,25 @@ const Header = () => {
       <img className="w-44" src={logo} alt="logo" />
       {user && (
         <div className="flex p-2 gap-2">
-          <select className="p-2 m-2 bg-black text-white rounded-lg">
-            {SUPPORTED_LANGUAGES.map((lang) => (
-              <option key={lang.identifier} value={lang.identifier}>
-                {lang.name}
-              </option>
-            ))}
-          </select>
+          {showGptSearch && (
+            <select
+              className="p-2 m-2 bg-black text-white rounded-lg"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
           <button
             className="bg-purple-800 text-white rounded-lg py-2 px-4 mx-4 my-2"
             onClick={handleGptSearchClick}
           >
-            GPT Search
+            {showGptSearch ? "Home" : "GPT Search"}
           </button>
+          }
           <img
             className="w-12 h-12 rounded-full"
             src={user.photoURL}
