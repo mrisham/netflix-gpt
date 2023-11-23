@@ -35,6 +35,8 @@
 -Enhanced the browse UI
 -usePopularMovies hook
 -gpt search feature
+-Introduced multi lanhuage feature in gpt search
+-Integrated GPT Api
 
 # Features
 
