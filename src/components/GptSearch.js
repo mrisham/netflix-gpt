@@ -5,7 +5,7 @@ import { LOGIN_BG_URL } from "../utils/contants";
 const GptSearch = () => {
   return (
     <div>
-      <div className="absolute -z-10">
+      <div className="fixed -z-10">
         <img src={LOGIN_BG_URL} alt="body-bg-img" />
       </div>
       <GptSearchBar />
