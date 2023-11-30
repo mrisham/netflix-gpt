@@ -75,7 +75,6 @@ const Header = () => {
           >
             {showGptSearch ? "Home" : "GPT Search"}
           </button>
-          }
           <img
             className="w-12 h-12 rounded-full"
             src={user.photoURL}
