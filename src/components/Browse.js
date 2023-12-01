@@ -11,7 +11,7 @@ const Browse = () => {
   useNowPlayingMovies();
   usePopularMovies();
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Header />
       {showGptSearch ? (
         <GptSearch />

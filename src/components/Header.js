@@ -53,13 +53,13 @@ const Header = () => {
       });
   };
   return (
-    <div className="absolute w-screen px-8 py-2  bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
+    <div className="absolute w-full px-2 md:px-6 py-2 z-20 flex flex-col md:flex-row justify-between items-center bg-gradient-to-b from-black  ">
       <img className="w-44 mx-auto md:mx-0" src={logo} alt="logo" />
       {user && (
-        <div className="flex p-2 gap-2 justify-between">
+        <div className="flex p-2 fap-2 justify-between">
           {showGptSearch && (
             <select
-              className="p-2 m-2 bg-black text-white rounded-lg"
+              className="p-2 m-2 bg-gray-900 text-white rounded-lg"
               onChange={handleLanguageChange}
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
@@ -69,22 +69,23 @@ const Header = () => {
               ))}
             </select>
           )}
+
           <button
-            className="bg-purple-800 text-white rounded-lg py-2 px-4 mx-4 my-2"
+            className="bg-red-700 text-white mx-2 md:mx-4 px-2  md:px-4 py-1 my-1 rounded-sm md:rounded-md hover:bg-red-500 "
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "Home" : "GPT Search"}
           </button>
           <img
-            className="hidden md:block w-12 h-12 rounded-full"
+            className="hidden md:block w-12 h-12  rounded-full "
             src={user.photoURL}
             alt="usericon"
           />
           <button
             onClick={handleSignOut}
-            className="font-bold text-white cursor-pointer"
+            className="font-bold font-xl m-2 p-2 text-white cursor-pointer"
           >
-            (Sign Out)
+            Sign Out
           </button>
         </div>
       )}
