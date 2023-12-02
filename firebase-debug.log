@@ -1,0 +1,38 @@
+[debug] [2023-12-02T16:22:33.416Z] ----------------------------------------------------------------------
+[debug] [2023-12-02T16:22:33.419Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mridu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-12-02T16:22:33.419Z] CLI Version:   12.9.1
+[debug] [2023-12-02T16:22:33.420Z] Platform:      win32
+[debug] [2023-12-02T16:22:33.420Z] Node Version:  v18.16.1
+[debug] [2023-12-02T16:22:33.421Z] Time:          Sat Dec 02 2023 21:52:33 GMT+0530 (India Standard Time)
+[debug] [2023-12-02T16:22:33.421Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=410106034&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-12-02T16:22:37.958Z] Error: spawn cmd ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:283:19)
+    at onErrorNT (node:internal/child_process:476:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-02T16:23:04.928Z] ----------------------------------------------------------------------
+[debug] [2023-12-02T16:23:04.931Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mridu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-12-02T16:23:04.932Z] CLI Version:   12.9.1
+[debug] [2023-12-02T16:23:04.932Z] Platform:      win32
+[debug] [2023-12-02T16:23:04.932Z] Node Version:  v18.16.1
+[debug] [2023-12-02T16:23:04.934Z] Time:          Sat Dec 02 2023 21:53:04 GMT+0530 (India Standard Time)
+[debug] [2023-12-02T16:23:04.935Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=526061850&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+
